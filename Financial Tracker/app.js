@@ -1,4 +1,4 @@
-// app.js
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
@@ -19,7 +19,7 @@ mongoose.connect('mongodb://localhost:27017/personal_finance', { useNewUrlParser
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// RESTful API routes for transactions
+
 app.get('/api/transactions', async (req, res) => {
     try {
         const transactions = await Transaction.find({ userId: req.user._id });
@@ -80,7 +80,7 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-// Middleware to authenticate user
+
 const authenticateUser = async (req, res, next) => {
     try {
         const token = req.headers.authorization.split(' ')[1];
@@ -98,7 +98,7 @@ const authenticateUser = async (req, res, next) => {
 };
 app.use(authenticateUser);
 
-// Start the server
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
