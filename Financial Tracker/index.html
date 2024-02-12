@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+        <div id="authContainer">
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <button id="logoutButton" style="display: none;">Logout</button>
+        </div>
+        <div id="transactionFormContainer" style="display: none;">
+            <form id="transactionForm">
+                <input type="date" id="transactionDate" placeholder="Date" required>
+                <input type="text" id="transactionCategory" placeholder="Category" required>
+                <input type="number" id="transactionAmount" placeholder="Amount" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+        <div id="dashboard" style="display: none;">
+            <h2>Recent Transactions</h2>
+            <ul id="transactionList"></ul>
+            <h2>Current Balance: $<span id="currentBalance">0.00</span></h2>
+        </div>
+        <div id="report" style="display: none;">
+            <h2>Monthly Summary</h2>
+            <p>Total Income: $<span id="totalIncome">0.00</span></p>
+            <p>Total Expenses: $<span id="totalExpenses">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
