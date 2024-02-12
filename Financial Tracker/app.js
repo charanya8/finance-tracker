@@ -6,6 +6,9 @@ const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const User = require('./models/User');
 const Transaction = require('./models/Transaction');
+const index=require('./index.html')
+const styles=require('./styles.html')
+const script=require('./script.html')
 
 
 const app = express();
